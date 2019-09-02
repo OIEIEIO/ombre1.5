@@ -158,6 +158,7 @@ bool get_block_reward(network_type nettype, size_t median_size, size_t current_b
 		{
 		reward = base_reward / 2;
 		}
+		return true;
 	}
 
 	assert(median_size < std::numeric_limits<uint32_t>::max());
