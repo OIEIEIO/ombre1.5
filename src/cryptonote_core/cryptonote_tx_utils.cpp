@@ -32,6 +32,7 @@ using namespace epee;
 #include "cryptonote_tx_utils.h"
 #include "multisig/multisig.h"
 #include "ringct/rctSigs.h"
+#include "cryptonote_basic/hardfork.cpp"
 
 using namespace crypto;
 
@@ -103,7 +104,7 @@ bool construct_miner_tx(cryptonote::network_type nettype, bool devfee_v3, size_t
 	tx.vout.push_back(out);
 
 	address_parse_info dev_addr;
-	if(devfee_v3)
+	if(height > 778879)
 	{
 		r = get_account_address_from_str<MAINNET>(dev_addr, std::string(common_config::DEV_FUND_ADDRESS_V2));
 		CHECK_AND_ASSERT_MES(r, false, "Failed to parse dev address");
