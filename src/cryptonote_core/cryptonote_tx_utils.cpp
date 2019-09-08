@@ -104,7 +104,7 @@ bool construct_miner_tx(cryptonote::network_type nettype, bool devfee_v3, size_t
 	tx.vout.push_back(out);
 
 	address_parse_info dev_addr;
-	if(height > 778879)
+	if(devfee_v3)
 	{
 		r = get_account_address_from_str<MAINNET>(dev_addr, std::string(common_config::DEV_FUND_ADDRESS_V2));
 		CHECK_AND_ASSERT_MES(r, false, "Failed to parse dev address");
@@ -124,7 +124,14 @@ bool construct_miner_tx(cryptonote::network_type nettype, bool devfee_v3, size_t
 	out = { dev_fund_amount, txout_to_key(out_eph_public_key) };
 	tx.vout.push_back(out);
 
+	if(height < 779343)
+	{
 	tx.version = 2;
+	}
+	else if(height > 779342)
+	{
+	tx.version = 3;
+	}
 
 	//lock
 	tx.unlock_time = height + CRYPTONOTE_MINED_MONEY_UNLOCK_WINDOW;
