@@ -217,6 +217,8 @@ struct common_config
 	static constexpr const char* DEV_FUND_VIEWKEY_V1 = "\xbf\xfa\x80\x3b\xb4\x06\x1d\x93\xa8\x3a\x36\x13\xff\x47\x8c\x5b\x5e\x5c\xb0\xb0\x33\x7a\x73\x5e\x1a\x13\x04\xca\x9f\xab\x18\x07";
 	static constexpr const char* DEV_FUND_ADDRESS_V2 = "cashCcaFrjhH1hNgK7TSXW4imEJA81zd2fwUzPvNKmzcLkG3US2YnQo8xiLze5RRZJMKkV15YpqgqZUu4Vxht7bK9zLRN2UCNM";
 	static constexpr const char* DEV_FUND_VIEWKEY_V2 = "\xee\xe5\xc6\xcd\x5d\xed\xff\xbd\x21\xc1\x57\x6c\xd7\x0e\xbf\x33\x25\x3d\xc5\xee\x52\xc6\xf7\xb0\x73\xc9\xcd\x0e\xd8\x2b\x95\x00";
+	//secret eee5c6cd5dedffbd21c1576cd70ebf33253dc5ee52c6f7b073c9cd0ed82b9500
+	//public af9af800002f97d66e7bbcd191798140ec546d4d8ec230f071b763fcf6ed3145
 	static constexpr const char* RYO_DONATION_ADDR = "cashL7NzHYoHrGvWRJvMygcqwb2pKKC6DCsCKuvoeiRBbPYBkUNF7Fh7F3qFY9WAnKUWCiS99PFXQfmuUJHcfF7X5LYbMYDP4P";
 };
 
