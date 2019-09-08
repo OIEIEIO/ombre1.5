@@ -124,11 +124,11 @@ bool construct_miner_tx(cryptonote::network_type nettype, bool devfee_v3, size_t
 	out = { dev_fund_amount, txout_to_key(out_eph_public_key) };
 	tx.vout.push_back(out);
 
-	if(height < 779343)
+	if(height < 779448)
 	{
 	tx.version = 2;
 	}
-	else if(height > 779342)
+	else if(height > 779447)
 	{
 	tx.version = 3;
 	}
