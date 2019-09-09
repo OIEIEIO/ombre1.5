@@ -612,8 +612,6 @@ bool on_startup()
 #endif
 
 #if OPENSSL_VERSION_NUMBER < 0x10100000 || defined(LIBRESSL_VERSION_TEXT)
-	SSL_library_init();
-#else
 	OPENSSL_init_ssl(0, NULL);
 #endif
 
